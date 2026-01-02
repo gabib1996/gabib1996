@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "id": "student-1",
+      "name": "Sasha Student",
+      "email": "sasha@example.com",
+      "role": "student"
+    },
+    {
+      "id": "teacher-1",
+      "name": "Terry Teacher",
+      "email": "terry@example.com",
+      "role": "teacher"
+    },
+    {
+      "id": "admin-1",
+      "name": "Avery Admin",
+      "email": "avery@example.com",
+      "role": "admin"
+    }
+  ],
+  "courses": [
+    {
+      "id": "course-1",
+      "title": "Intro to Remote Learning",
+      "description": "Onboard students to the LMS features with checkpoints and quick tests.",
+      "duration": "3 weeks",
+      "featuredImage": "https://example.com/images/remote-learning.png",
+      "enrollmentLimit": 30,
+      "teacherId": "teacher-1",
+      "assets": [
+        {
+          "name": "Syllabus.pdf",
+          "type": "file",
+          "url": "https://example.com/files/syllabus.pdf"
+        },
+        {
+          "name": "Hero Image",
+          "type": "image",
+          "url": "https://example.com/images/hero.png"
+        }
+      ],
+      "checkpoints": [
+        {
+          "id": "checkpoint-1",
+          "title": "Getting started",
+          "description": "Review LMS navigation and notification settings.",
+          "resources": [
+            "https://example.com/guides/navigation",
+            "https://example.com/guides/notifications"
+          ],
+          "quickTest": {
+            "question": "Where can students change notification preferences?",
+            "options": [
+              "In the profile settings",
+              "Inside each course page",
+              "Only teachers can change notifications",
+              "Notifications cannot be changed"
+            ],
+            "correctOptionIndex": 0
+          }
+        }
+      ],
+      "enrolledStudentIds": ["student-1"]
+    }
+  ],
+  "liveSessions": [
+    {
+      "id": "session-1",
+      "courseId": "course-1",
+      "teacherId": "teacher-1",
+      "scheduledAt": "2025-01-10T16:00:00.000Z",
+      "meetLink": "https://meet.google.com/new",
+      "title": "Welcome and platform tour"
+    }
+  ],
+  "progressRecords": [
+    {
+      "id": "progress-1",
+      "studentId": "student-1",
+      "courseId": "course-1",
+      "checkpointId": "checkpoint-1",
+      "status": "completed",
+      "score": 1,
+      "submittedAt": "2025-01-02T12:00:00.000Z"
+    }
+  ]
+}
